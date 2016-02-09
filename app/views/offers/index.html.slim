@@ -1,0 +1,17 @@
+h1 Offers
+= form_tag(offers_path, method: 'get', remote: true) do
+  #div
+    = label_tag 'uid', 'UID'
+    = text_field_tag 'offer[uid]'
+  #div
+    = label_tag 'pub0', 'Pub0'
+    = text_field_tag 'offer[pub0]'
+  #div
+    = label_tag 'page', 'Page'
+    = text_field_tag 'offer[page]'
+  #div
+    = button_tag 'Search'
+
+h2 Search Result
+#search-result
+  = render 'search_result', offers: @offers

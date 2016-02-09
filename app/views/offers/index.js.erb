@@ -1,0 +1,5 @@
+<% if @offers && @offers.any? %>
+  $('#search-result').html('<%= j render 'search_result', offers: @offers %>');
+<% else %>
+  $('#search-result').html('No offers available')
+<% end %>
